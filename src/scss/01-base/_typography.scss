@@ -1,0 +1,60 @@
+$font-main: 'Inter', sans-serif;
+$font-second: 'Montserrat', sans-serif;
+
+.nav-item {
+  font-family: $font-main;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.text {
+  @include responsive-fonts(16, 14);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.text-xsm {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.display-xxl {
+  font-family: $font-second;
+  @include responsive-fonts(60, 40);
+  line-height: 1.16;
+  font-weight: 500;
+}
+.display-xl {
+  font-family: $font-second;
+  @include responsive-fonts(48, 32);
+  line-height: 1.16;
+  font-weight: 500;
+
+  i,
+  em {
+    font-family: $font-main;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+}
+.display-lg {
+}
+.display-md {
+  font-family: $font-second;
+  @include responsive-fonts(28, 19);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.display-sm {
+}
+.display-xs {
+}
