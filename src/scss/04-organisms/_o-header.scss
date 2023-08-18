@@ -1,0 +1,43 @@
+.o-header {
+  &__wrapper {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 49px;
+
+    &-item {
+      @extend .nav-item;
+    }
+
+    .sub-menu {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    margin-left: 52px;
+    cursor: pointer;
+
+    img {
+      height: 24px;
+      width: 24px;
+      margin-left: auto;
+      object-fit: contain;
+    }
+  }
+}
