@@ -1,8 +1,11 @@
 .o-header {
+  position: relative;
+  background-color: #fff;
+
   &__wrapper {
-    padding: 25px 0;
     display: flex;
     align-items: center;
+    padding: 5px 0;
   }
 
   &__nav {
@@ -19,25 +22,100 @@
     gap: 49px;
 
     &-item {
-      @extend .nav-item;
+      position: relative;
+      z-index: 9;
+
+      a {
+        @extend .nav-item;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 20px 0;
+      }
+
+      img {
+        height: 100%;
+        width: 11px;
+        object-fit: contain;
+      }
+
+      &:has(.sub-menu) {
+        cursor: pointer;
+
+        &:hover {
+          .sub-menu {
+            display: flex;
+          }
+        }
+      }
     }
 
     .sub-menu {
+      @include transition(transform);
+      position: absolute;
+      top: 100%;
+      left: -16px;
+      width: 100%;
+      min-width: 200px;
+      border: 1px solid #f0eeee;
+      box-shadow: 0px 16px 32px 0px rgba(53, 48, 48, 0.08);
+      background-color: $color-white;
+      padding: 24px 16px;
+      border-radius: 16px;
       display: none;
+      flex-direction: column;
+      gap: 5px;
+
+      a {
+        padding: 5px;
+        line-height: 2em;
+
+        &:hover {
+          background: #f8f6f6;
+        }
+      }
     }
   }
 
   &__search {
     display: flex;
     align-items: center;
-    margin-left: 52px;
+    margin-left: 49px;
     cursor: pointer;
 
     img {
-      height: 24px;
-      width: 24px;
+      height: 21px;
+      width: 21px;
       margin-left: auto;
       object-fit: contain;
+    }
+  }
+
+  &__searchBar {
+    transition:
+      opacity 0.25s ease-in-out,
+      visibility 0.25s ease-in-out,
+      transform 0.25s ease-in-out;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    top: -100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transform: translateY(-100%);
+    border: 1px solid #f0eeee;
+    box-shadow: 0px 16px 32px 0px rgba(53, 48, 48, 0.08);
+    background-color: $color-white;
+    padding: 24px 16px;
+
+    &.active {
+      visibility: visible;
+      transform: translateY(75px);
+      top: 0;
+      opacity: 1;
     }
   }
 }

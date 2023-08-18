@@ -1,0 +1,9 @@
+.a-input-text {
+  border: none;
+  border: 1px solid #ced4da;
+  color: $color-text-grey;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  @extend .text;
+}
