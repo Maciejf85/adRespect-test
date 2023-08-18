@@ -1,0 +1,8 @@
+@mixin limit-center($width) {
+  max-width: $width + px;
+  margin: 0 auto;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}

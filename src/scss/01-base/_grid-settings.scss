@@ -1,0 +1,27 @@
+/* --------------------------------- Gutter --------------------------------- */
+
+$grid-gutter: 15px;
+$grid-gutter-container: 15px;
+
+/* -------------------------------- Container ------------------------------- */
+
+$grid-container: 100%;
+$grid-container-sm: 540px;
+$grid-container-md: 720px;
+$grid-container-lg: 960px;
+$grid-container-xl: 1140px;
+$grid-container-xxl: $grid-container-xl;
+
+/* ------------------------------- Breakpoints ------------------------------ */
+
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+$min-xxl: 1440px;
+
+$max-xs: 575px;
+$max-sm: 767px;
+$max-md: 991px;
+$max-lg: 1199px;
+$max-xl: $max-lg;
