@@ -1,9 +1,27 @@
-.btn-with-icon {
+.a-btn-with-icon {
   position: relative;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
   background-color: transparent;
+  border: 1px solid $color-main;
   border-radius: 200px;
-  padding: 12px 22px 14px;
-  color: $color-beige;
+  padding: 12px 21px;
+  color: $color-main;
   font-size: 16px;
   line-height: 1.5;
+
+  &:hover {
+    img {
+      transform: translateY(3px);
+    }
+  }
+
+  img {
+    @include transition(transform);
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    object-position: center;
+  }
 }

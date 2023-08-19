@@ -7,13 +7,13 @@
     @media #{$sm} {
       font-size: $mobile + $step + px;
     }
-    @media #{md} {
+    @media #{$md} {
       font-size: $mobile + $step * 2 + px;
     }
-    @media #{lg} {
+    @media #{$lg} {
       font-size: $mobile + $step * 3 + px;
     }
-    @media #{xl} {
+    @media #{$xl} {
       font-size: $desktop + px;
     }
   } @else {
@@ -21,19 +21,19 @@
 
     font-size: $mobile + px;
 
-    @media #{sm} {
+    @media #{$sm} {
       font-size: $mobile + $step + px;
     }
-    @media #{md} {
+    @media #{$md} {
       font-size: $mobile + $step * 2 + px;
     }
-    @media #{lg} {
+    @media #{$lg} {
       font-size: $mobile + $step * 3 + px;
     }
-    @media #{xl} {
+    @media #{$xl} {
       font-size: $mobile + $step * 4 + px;
     }
-    @media #{xxl} {
+    @media #{$xxl} {
       font-size: $desktop + px;
     }
   }
@@ -46,16 +46,16 @@
 
       margin-#{$dir}: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-#{$dir}: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-#{$dir}: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-#{$dir}: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-#{$dir}: $desktop + px;
       }
     } @else {
@@ -63,19 +63,19 @@
 
       margin-#{$dir}: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-#{$dir}: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-#{$dir}: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-#{$dir}: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-#{$dir}: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         margin-#{$dir}: $desktop + px;
       }
     }
@@ -87,19 +87,19 @@
       margin-top: $mobile + px;
       margin-bottom: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-top: $mobile + $step + px;
         margin-bottom: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-top: $mobile + $step * 2 + px;
         margin-bottom: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-top: $mobile + $step * 3 + px;
         margin-bottom: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-top: $desktop + px;
         margin-bottom: $desktop + px;
       }
@@ -109,23 +109,23 @@
       margin-top: $mobile + px;
       margin-bottom: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-top: $mobile + $step + px;
         margin-bottom: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-top: $mobile + $step * 2 + px;
         margin-bottom: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-top: $mobile + $step * 3 + px;
         margin-bottom: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-top: $mobile + $step * 4 + px;
         margin-bottom: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         margin-top: $desktop + px;
         margin-bottom: $desktop + px;
       }
@@ -136,16 +136,16 @@
 
       margin-inline: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-inline: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-inline: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-inline: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-inline: $desktop + px;
       }
     } @else {
@@ -153,19 +153,19 @@
 
       margin-inline: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         margin-inline: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         margin-inline: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         margin-inline: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         margin-inline: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         margin-inline: $desktop + px;
       }
     }
@@ -179,16 +179,16 @@
 
       padding-#{$dir}: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-#{$dir}: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-#{$dir}: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-#{$dir}: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-#{$dir}: $desktop + px;
       }
     } @else {
@@ -196,19 +196,19 @@
 
       padding-#{$dir}: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-#{$dir}: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-#{$dir}: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-#{$dir}: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-#{$dir}: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         padding-#{$dir}: $desktop + px;
       }
     }
@@ -220,19 +220,19 @@
       padding-top: $mobile + px;
       padding-bottom: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-top: $mobile + $step + px;
         padding-bottom: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-top: $mobile + $step * 2 + px;
         padding-bottom: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-top: $mobile + $step * 3 + px;
         padding-bottom: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-top: $desktop + px;
         padding-bottom: $desktop + px;
       }
@@ -242,23 +242,23 @@
       padding-top: $mobile + px;
       padding-bottom: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-top: $mobile + $step + px;
         padding-bottom: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-top: $mobile + $step * 2 + px;
         padding-bottom: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-top: $mobile + $step * 3 + px;
         padding-bottom: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-top: $mobile + $step * 4 + px;
         padding-bottom: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         padding-top: $desktop + px;
         padding-bottom: $desktop + px;
       }
@@ -269,16 +269,16 @@
 
       padding-inline: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-inline: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-inline: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-inline: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-inline: $desktop + px;
       }
     } @else {
@@ -286,19 +286,19 @@
 
       padding-inline: $mobile + px;
 
-      @media #{sm} {
+      @media #{$sm} {
         padding-inline: $mobile + $step + px;
       }
-      @media #{md} {
+      @media #{$md} {
         padding-inline: $mobile + $step * 2 + px;
       }
-      @media #{lg} {
+      @media #{$lg} {
         padding-inline: $mobile + $step * 3 + px;
       }
-      @media #{xl} {
+      @media #{$xl} {
         padding-inline: $mobile + $step * 4 + px;
       }
-      @media #{xxl} {
+      @media #{$xxl} {
         padding-inline: $desktop + px;
       }
     }

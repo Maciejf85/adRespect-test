@@ -1,0 +1,36 @@
+/* -------------------------------------------------------------------------- */
+/*                               Underline hover                              */
+/* -------------------------------------------------------------------------- */
+
+@mixin underline-hover($color: $color-main, $height: 2px, $bottom: 0) {
+  &::after {
+    @include transition($property: transform, $ease: ease-out);
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background-color: $color;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    content: '';
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::after {
+      bottom: $bottom;
+      transform: scaleX(1);
+      transform-origin: bottom left;
+      opacity: 1;
+    }
+  }
+}
+@mixin underline-active($bottom: 0) {
+  &::after {
+    bottom: $bottom;
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}

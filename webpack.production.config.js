@@ -72,7 +72,7 @@ module.exports = {
         test: /\.(png|jpeg|jpg|gif|svg|ico|webm)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[contenthash].[ext]',
+          filename: 'img/[name].[ext]',
         },
       },
     ],
@@ -92,7 +92,15 @@ module.exports = {
           from: path.resolve(__dirname, 'src'),
           to: path.resolve(__dirname, 'build'),
           globOptions: {
-            ignore: ['**/*.js', '**/*.ts', '**/*.sass', '**/*.scss', '**/*.css', '**/.gitkeep'],
+            ignore: [
+              '**/*.js',
+              '**/*.ts',
+              '**/*.sass',
+              '**/*.html',
+              '**/*.scss',
+              '**/*.css',
+              '**/.gitkeep',
+            ],
           },
           noErrorOnMissing: true,
         },

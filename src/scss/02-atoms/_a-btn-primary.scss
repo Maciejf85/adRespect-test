@@ -1,8 +1,9 @@
-.btn-primary {
+.a-btn-primary {
   background-color: $color-main;
   border-radius: 200px;
   padding: 12px 24px 14px;
-  color: $color-beige;
+  color: $color-beige-light;
+  border: 1px solid $color-main;
   font-size: 16px;
   line-height: 1.5;
 }

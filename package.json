@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^5.2.0",
     "resolve-url-loader": "^5.0.0",
-    "swiper": "^10.1.0"
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
