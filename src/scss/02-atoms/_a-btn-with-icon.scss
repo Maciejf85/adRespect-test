@@ -3,6 +3,7 @@
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  cursor: pointer;
   background-color: transparent;
   border: 1px solid $color-main;
   border-radius: 200px;
@@ -12,16 +13,27 @@
   line-height: 1.5;
 
   &:hover {
-    img {
+    img,
+    svg {
       transform: translateY(3px);
     }
   }
 
-  img {
+  img,
+  svg {
     @include transition(transform);
     width: 16px;
     height: 16px;
     object-fit: cover;
     object-position: center;
+  }
+
+  &--alt {
+    &:hover {
+      img,
+      svg {
+        transform: translateX(3px);
+      }
+    }
   }
 }

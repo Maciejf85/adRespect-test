@@ -2,10 +2,9 @@ $swiper-btns-hover: -5px;
 
 .o-hero {
   @include responsive-margin(bottom, 120, 60);
+  width: calc(100% + 32px);
+  margin-left: -16px;
   .swiper {
-    width: calc(100% + 32px);
-    margin-left: -16px;
-
     &-button {
       &-prev,
       &-next {
