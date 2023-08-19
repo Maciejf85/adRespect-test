@@ -12,6 +12,10 @@ $font-second: 'Montserrat', sans-serif;
   @include responsive-fonts(16, 14);
   line-height: 1.5;
   font-weight: 400;
+
+  &--alt {
+    letter-spacing: -0.01em;
+  }
 }
 
 .text-sm {
@@ -37,11 +41,12 @@ $font-second: 'Montserrat', sans-serif;
   @include responsive-fonts(48, 32);
   line-height: 1.16;
   font-weight: 500;
+  letter-spacing: -0.03em;
 
   i,
   em {
+    letter-spacing: 0;
     font-family: $font-main;
-    letter-spacing: -0.03em;
     line-height: 1.15;
   }
 }

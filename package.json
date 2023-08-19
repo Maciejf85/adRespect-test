@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3",
     "bootstrap": "^5.2.0",
     "resolve-url-loader": "^5.0.0",
     "swiper": "^10.2.0"

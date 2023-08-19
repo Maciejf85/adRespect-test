@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: $font-main;
   color: $color-black;
+  background: $color-beige-light;
 
   &.blocked {
     overflow: hidden;
