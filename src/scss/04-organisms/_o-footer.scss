@@ -2,9 +2,6 @@
   background-color: $color-black;
   @include responsive-padding(vertical, 81, 60);
 
-  &__wrapper {
-  }
-
   &__cta {
     display: flex;
     align-items: center;
@@ -27,10 +24,13 @@
 
   &__menu {
     display: flex;
+    align-items: flex-start;
     gap: 48px;
 
     &-item {
+      position: relative;
       a {
+        @include underline-hover($color: $color-beige-light);
         color: $color-beige-light;
       }
     }
@@ -43,7 +43,12 @@
     margin-bottom: 118px;
 
     a {
+      @include transition();
       color: $color-beige-light;
+
+      &:hover {
+        color: $color-beige;
+      }
     }
   }
 
