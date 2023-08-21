@@ -1,6 +1,7 @@
 .o-realizations {
   background: $color-beige;
   @include responsive-padding(top, 120, 60);
+  margin-bottom: 60px;
 
   .container-fluid {
     padding: 0;

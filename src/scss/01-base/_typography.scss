@@ -51,7 +51,20 @@ $font-second: 'Montserrat', sans-serif;
   }
 }
 .display-lg {
+  font-family: $font-second;
+  @include responsive-fonts(40, 28);
+  line-height: 1.2;
+  letter-spacing: -2px;
+  font-weight: 400;
+
+  i,
+  em {
+    letter-spacing: 1px;
+    font-family: $font-main;
+    line-height: 1.2;
+  }
 }
+
 .display-md {
   font-family: $font-second;
   @include responsive-fonts(28, 19);
