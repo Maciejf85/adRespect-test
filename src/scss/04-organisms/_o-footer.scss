@@ -1,0 +1,61 @@
+.o-footer {
+  background-color: $color-black;
+  @include responsive-padding(vertical, 81, 60);
+
+  &__wrapper {
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    color: $color-beige-light;
+    padding-bottom: 59px;
+    border-bottom: 1px solid $color-beige-light;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      margin-left: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    padding-top: 64px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 48px;
+
+    &-item {
+      a {
+        color: $color-beige-light;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    margin-left: auto;
+    gap: 48px;
+    margin-bottom: 118px;
+
+    a {
+      color: $color-beige-light;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    color: $color-beige-light;
+  }
+
+  &__made {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+  }
+}
