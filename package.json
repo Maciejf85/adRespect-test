@@ -6,6 +6,7 @@
   "dependencies": {
     "@iconfu/svg-inject": "^1.2.3",
     "bootstrap": "^5.2.0",
+    "lightbox2": "^2.11.4",
     "masonry-layout": "^4.2.2",
     "resolve-url-loader": "^5.0.0",
     "swiper": "^10.2.0"

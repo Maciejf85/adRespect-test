@@ -2,7 +2,7 @@ html,
 body {
   text-rendering: optimizelegibility;
   margin: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +18,10 @@ body {
 ::selection {
   color: $color-beige;
   background-color: $color-main;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 *,
