@@ -1,12 +1,17 @@
 .o-offer {
   @include responsive-margin(bottom, 160, 60);
+  padding-inline: 14px;
 
-  &__wrapper {
+  @media #{$md} {
+    padding: 0;
   }
 
   &__head {
     @include responsive-margin(bottom, 96, 45);
-    padding: 0 4px;
+
+    @media #{$md} {
+      padding: 0 4px;
+    }
   }
 
   &__title {

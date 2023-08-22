@@ -1,6 +1,11 @@
 .o-footer {
   background-color: $color-black;
   @include responsive-padding(vertical, 79, 45);
+  padding-inline: 14px;
+
+  @media #{$md} {
+    padding-inline: 0;
+  }
 
   &__cta {
     @include responsive-padding(bottom, 59, 32);

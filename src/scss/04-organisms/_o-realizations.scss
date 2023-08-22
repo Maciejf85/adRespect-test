@@ -9,8 +9,10 @@
 
   &__wrapper {
     @include responsive-margin(bottom, 98, 60);
+    padding-inline: 16px;
 
     @media #{$md} {
+      padding: 0;
       padding-left: 70px;
     }
   }
