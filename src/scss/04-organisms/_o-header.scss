@@ -1,6 +1,9 @@
 .o-header {
   background-color: #fff;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 71px;
 
   &__wrapper {
     position: relative;
@@ -16,6 +19,11 @@
 
   &__nav {
     margin-left: auto;
+    display: none;
+
+    @media #{$lg} {
+      display: flex;
+    }
   }
 
   &__logo {
@@ -90,16 +98,162 @@
   }
 
   &__search {
-    display: flex;
+    display: none;
     align-items: center;
     margin-left: 49px;
     cursor: pointer;
+
+    @media #{$lg} {
+      display: flex;
+    }
 
     img {
       height: 21px;
       width: 21px;
       margin-left: auto;
       object-fit: contain;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    display: block;
+
+    @media #{$lg} {
+      display: none;
+    }
+
+    span {
+      @include transition();
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 30px;
+      background-color: $color-black;
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+      &:nth-child(3) {
+        top: 70%;
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform-origin: bottom left;
+          transform: translate(-50%, -50%) rotate(45deg);
+          left: calc(50% + 2px);
+          top: calc(20%);
+        }
+
+        &:nth-child(2) {
+          width: 0;
+        }
+
+        &:nth-child(3) {
+          top: calc(65% + 1px);
+          left: calc(50% + 4px);
+          transform-origin: bottom left;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    transition:
+      transform 0.2s ease-in-out,
+      opacity 0.25s ease-in-out,
+      visibility 0.25s ease-in-out,
+      background-color 0.25s ease-in-out;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 30px;
+    background: transparent;
+    background: $color-beige-light;
+    z-index: 99;
+    width: 100vw;
+    height: calc(100vh - 63px);
+    opacity: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+
+    @media #{$lg} {
+      display: none;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+
+      .sub-menu {
+        padding-left: 15px;
+
+        a {
+          line-height: 1;
+        }
+      }
+    }
+
+    &-item {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      font-size: 20px;
+      font-family: $font-second;
+
+      &:has(ul) {
+        margin-bottom: 0;
+      }
+
+      a {
+        transition:
+          transform 0.25s ease-in-out,
+          color 0.25s ease-in-out;
+        display: inline-block;
+        padding: 10px;
+        position: relative;
+        overflow-x: hidden;
+
+        &::before {
+          transition: transform 0.25s ease-in-out;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: $color-main;
+          transform: translateX(-101%);
+          z-index: -1;
+        }
+
+        &:hover {
+          color: $color-beige;
+          &::before {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    &.active {
+      transition: transform 0.2s ease-in-out;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      background-color: $color-beige-light;
     }
   }
 

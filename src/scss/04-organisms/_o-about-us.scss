@@ -4,12 +4,26 @@
 
   &__wrapper {
     display: flex;
+    flex-direction: column;
     overflow: hidden;
+
+    @media #{$md} {
+      flex-direction: row;
+    }
   }
 
   &__image {
     position: relative;
-    width: 47.5%;
+    width: 100%;
+    aspect-ratio: 1;
+    max-height: 418px;
+    font-size: 0;
+
+    @media #{$md} {
+      aspect-ratio: 0;
+      width: 47.5%;
+      max-height: none;
+    }
 
     img {
       height: 100%;
@@ -23,15 +37,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 52%;
+    width: 100%;
     background-color: $color-main;
     padding: 45px 0;
-
-    @media #{$sm} {
-      width: calc(502px * 0.52);
-    }
+    padding-inline: 16px;
 
     @media #{$md} {
+      padding-inline: 0;
       width: calc(688px * 0.52);
     }
 
@@ -61,9 +73,16 @@
     position: relative;
     z-index: 2;
 
+    @media #{$md} {
+      padding-left: 45px;
+      margin-left: auto;
+    }
+
     @media #{$lg} {
       max-width: 500px;
-      margin-left: auto;
+    }
+    @media #{$xl} {
+      padding-left: 0;
     }
   }
 

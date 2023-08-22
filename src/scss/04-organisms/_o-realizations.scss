@@ -8,12 +8,31 @@
   }
 
   &__wrapper {
-    @include responsive-margin(bottom, 92, 60);
-    padding-left: 70px;
+    @include responsive-margin(bottom, 98, 60);
+
+    @media #{$md} {
+      padding-left: 70px;
+    }
   }
 
   &__container {
     position: relative;
+    padding-bottom: 45px;
+
+    .a-btn-primary {
+      width: 70%;
+
+      @media #{$md} {
+        width: 50%;
+      }
+      @media #{$lg} {
+        width: auto;
+      }
+    }
+
+    @media #{$md} {
+      padding-bottom: 0;
+    }
   }
 
   &__title {
@@ -50,17 +69,19 @@
 
   .grid-item {
     width: 100%;
-    height: 602px;
-    margin-bottom: 15px;
+    height: 601px;
+    margin-bottom: 30px;
     cursor: pointer;
+    overflow: hidden;
 
     @media #{$sm} {
-      width: calc((100% - 15px) / 2);
     }
+
     @media #{$md} {
-      width: 249px;
+      width: 360px;
     }
     @media #{$lg} {
+      padding-inline: 0;
       margin-bottom: 43px;
       width: 449px;
       height: 602px;
@@ -77,8 +98,6 @@
     }
 
     a {
-      display: inline-block;
-      overflow: hidden;
       font-size: 0;
 
       &:hover {
@@ -100,7 +119,7 @@
         visibility 0.25s ease-in-out,
         opacity 0.25s ease-in-out;
       position: absolute;
-      bottom: 94px;
+      bottom: 90px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 99;

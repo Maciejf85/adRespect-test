@@ -2,22 +2,61 @@
   margin-bottom: 60px;
 
   &__wrapper {
+    position: relative;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    gap: 30px;
     background-color: $color-main;
     color: $color-beige-light;
-    padding: 118px 110px;
+    @include responsive-padding(vertical, 118, 30);
+    @include responsive-padding(horizontal, 110, 16);
+
+    @media #{$md} {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: '';
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-main;
+      z-index: 0;
+    }
+
+    @media #{$md} {
+      flex-direction: row;
+      align-items: flex-end;
+    }
   }
 
   &__headline {
-    width: 80%;
+    position: relative;
+
+    @media #{$lg} {
+      width: 65%;
+    }
+    @media #{$xxl} {
+      width: 80%;
+    }
   }
 
   &__caption {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 20%;
+
+    @media #{$lg} {
+      width: 35%;
+    }
+    @media #{$xxl} {
+      width: 20%;
+    }
   }
 
   &__title {

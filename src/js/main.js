@@ -3,6 +3,7 @@ import { search } from './partials/_search';
 import { swiperJs } from './partials/_swiper';
 import { gallery } from './partials/_gallery';
 import { lightbox2Options } from './partials/_lightbox2';
+import { mobileMenu } from './partials/_mobile-menu';
 
 window.addEventListener('load', () => {
   // eslint-disable-next-line no-undef
@@ -11,4 +12,5 @@ window.addEventListener('load', () => {
   swiperJs();
   gallery();
   lightbox2Options();
+  mobileMenu();
 });

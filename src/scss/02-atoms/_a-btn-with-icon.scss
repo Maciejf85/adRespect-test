@@ -3,6 +3,7 @@
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   background-color: transparent;
   border: 1px solid $color-main;
@@ -11,6 +12,11 @@
   color: $color-main;
   font-size: 16px;
   line-height: 1.5;
+  width: 100%;
+
+  @media #{$md} {
+    width: auto;
+  }
 
   &:hover {
     img,

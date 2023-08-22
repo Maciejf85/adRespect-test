@@ -15,9 +15,7 @@ export const gallery = () => {
   // eslint-disable-next-line no-unused-vars
   const msnry = new Masonry(elem, {
     itemSelector: '.grid-item',
-    columnWidth: 80,
     gutter: 43,
-    isFitWidth: true,
   });
 
   if (showMore) {

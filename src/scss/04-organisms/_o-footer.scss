@@ -1,31 +1,58 @@
 .o-footer {
   background-color: $color-black;
-  @include responsive-padding(vertical, 81, 60);
+  @include responsive-padding(vertical, 79, 45);
 
   &__cta {
+    @include responsive-padding(bottom, 59, 32);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 45px;
     color: $color-beige-light;
-    padding-bottom: 59px;
     border-bottom: 1px solid $color-beige-light;
+
+    @media #{$lg} {
+      gap: 0;
+      align-items: center;
+      flex-direction: row;
+    }
 
     &-link {
       display: flex;
-      align-items: center;
-      gap: 27px;
-      margin-left: auto;
+      flex-direction: column;
+      gap: 15px;
+
+      @media #{$lg} {
+        gap: 27px;
+        align-items: center;
+        flex-direction: row;
+        margin-left: auto;
+      }
     }
   }
 
   &__nav {
+    @include responsive-padding(top, 64, 32);
+
     display: flex;
-    padding-top: 64px;
+    flex-direction: column;
+    gap: 30px;
+
+    @media #{$lg} {
+      flex-direction: row;
+      gap: 30px;
+    }
   }
 
   &__menu {
     display: flex;
     align-items: flex-start;
-    gap: 48px;
+    flex-direction: column;
+    gap: 15px;
+
+    @media #{$md} {
+      flex-direction: row;
+      gap: 48px;
+    }
 
     &-item {
       position: relative;
@@ -38,9 +65,18 @@
 
   &__contact {
     display: flex;
-    margin-left: auto;
-    gap: 48px;
-    margin-bottom: 118px;
+    flex-direction: column;
+    margin-bottom: 45px;
+    gap: 10px;
+
+    @media #{$md} {
+      margin-bottom: 118px;
+      flex-direction: row;
+      gap: 48px;
+    }
+    @media #{$lg} {
+      margin-left: auto;
+    }
 
     a {
       @include transition();
@@ -54,13 +90,25 @@
 
   &__bottom {
     display: flex;
+    flex-direction: column;
     color: $color-beige-light;
+    gap: 30px;
+
+    @media #{$md} {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__made {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: auto;
+    margin-inline: auto;
+
+    @media #{$md} {
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 }

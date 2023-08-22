@@ -1,4 +1,7 @@
 .a-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: $color-main;
   border-radius: 200px;
   padding: 12px 24px 14px;
@@ -6,4 +9,9 @@
   border: 1px solid $color-main;
   font-size: 16px;
   line-height: 1.5;
+  width: 100%;
+
+  @media #{$md} {
+    width: auto;
+  }
 }
