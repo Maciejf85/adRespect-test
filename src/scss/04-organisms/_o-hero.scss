@@ -76,6 +76,7 @@ $swiper-btns-hover: -5px;
         @media #{$md} {
           background-color: $color-beige-light;
           top: auto;
+          height: auto;
           bottom: -2px;
           aspect-ratio: 2;
           width: 112px;
