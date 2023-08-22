@@ -74,9 +74,6 @@
     cursor: pointer;
     overflow: hidden;
 
-    @media #{$sm} {
-    }
-
     @media #{$md} {
       width: 360px;
     }

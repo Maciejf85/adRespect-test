@@ -1,4 +1,5 @@
 import '@iconfu/svg-inject';
+import AOS from 'aos';
 import { search } from './partials/_search';
 import { swiperJs } from './partials/_swiper';
 import { gallery } from './partials/_gallery';
@@ -13,4 +14,5 @@ window.addEventListener('load', () => {
   gallery();
   lightbox2Options();
   mobileMenu();
+  AOS.init();
 });

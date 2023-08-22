@@ -103,15 +103,31 @@
     margin-left: 49px;
     cursor: pointer;
 
+    &:hover {
+      img,
+      svg {
+        path {
+          fill: $color-main;
+        }
+      }
+    }
+
     @media #{$lg} {
       display: flex;
     }
 
-    img {
+    img,
+    svg {
       height: 21px;
       width: 21px;
       margin-left: auto;
       object-fit: contain;
+    }
+
+    svg {
+      path {
+        @include transition(fill);
+      }
     }
   }
 

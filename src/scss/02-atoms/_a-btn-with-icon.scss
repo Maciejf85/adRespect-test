@@ -1,4 +1,7 @@
 .a-btn-with-icon {
+  transition:
+    color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
   position: relative;
   display: inline-flex;
   gap: 8px;
@@ -19,26 +22,47 @@
   }
 
   &:hover {
+    background-color: $color-main;
+    color: $color-beige-light;
     img,
     svg {
       transform: translateY(3px);
+    }
+
+    svg {
+      path {
+        fill: $color-beige-light;
+      }
     }
   }
 
   img,
   svg {
-    @include transition(transform);
+    transition: transform 0.25s ease-in-out;
     width: 16px;
     height: 16px;
     object-fit: cover;
     object-position: center;
+
+    path {
+      transition: fill 0.25s ease-in-out;
+    }
   }
 
   &--alt {
     &:hover {
+      color: $color-main;
+      background-color: $color-beige-light;
+
       img,
       svg {
         transform: translateX(3px);
+      }
+
+      svg {
+        path {
+          fill: $color-main;
+        }
       }
     }
   }

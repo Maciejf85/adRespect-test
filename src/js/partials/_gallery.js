@@ -16,6 +16,7 @@ export const gallery = () => {
   const msnry = new Masonry(elem, {
     itemSelector: '.grid-item',
     gutter: 43,
+    fitWidth: true,
   });
 
   if (showMore) {
