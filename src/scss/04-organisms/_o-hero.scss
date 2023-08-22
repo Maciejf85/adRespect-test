@@ -67,12 +67,17 @@ $swiper-btns-hover: -5px;
       &__btns {
         position: absolute;
         right: 0;
-        bottom: -2px;
-        aspect-ratio: 2;
-        background-color: $color-beige-light;
+        background-color: rgba($color-beige-light, 0.5);
         z-index: 999;
+        top: 395px;
+        width: 100%;
+        height: 50px;
 
         @media #{$md} {
+          background-color: $color-beige-light;
+          top: auto;
+          bottom: -2px;
+          aspect-ratio: 2;
           width: 112px;
         }
 
@@ -178,15 +183,14 @@ $swiper-btns-hover: -5px;
 
   &__image {
     width: 100%;
-    aspect-ratio: 1;
-    max-height: 418px;
+    height: 418px;
     font-size: 0;
     z-index: 9;
     margin-right: auto;
 
     @media #{$md} {
       width: calc(688px * 0.48);
-      max-height: none;
+      height: auto;
       aspect-ratio: 0.67;
     }
 
